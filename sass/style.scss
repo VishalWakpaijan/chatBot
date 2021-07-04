@@ -9,7 +9,7 @@ $primaryFont: "Inter", sans-serif;
 body {
   font: 1rem $primaryFont;
   line-height: 1.5;
-  background-color: $-clr-bg-light;
+  background: $-clr-bg-light;
   color: #444;
   display: flex;
   width: 100%;
@@ -29,7 +29,7 @@ body {
 
   background-color: $secondery-clr-card;
   border-radius: 15px;
-  box-shadow: 2px 2px 30px rgba($color: #474747, $alpha: 0.3);
+  box-shadow: 2px 2px 30px rgba($color: #747171, $alpha: 0.3);
 
   padding: 0 0 2rem 0;
 
@@ -143,13 +143,13 @@ body {
       }
 
       li:nth-child(2) {
-        animation: loaddown 4s ease-in-out;
+        animation: loaddown 3s ease-in-out;
       }
       li:nth-child(3) {
-        animation: loaddown 6s ease-in-out;
+        animation: loaddown 4s ease-in-out;
       }
       li:nth-child(4) {
-        animation: loaddown 8s ease-in-out;
+        animation: loaddown 5s ease-in-out;
       }
 
       @keyframes loaddown {
