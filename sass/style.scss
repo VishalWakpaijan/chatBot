@@ -1,0 +1,200 @@
+@import "./color";
+@import "./reset";
+@import "./media";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap");
+
+$primaryFont: "Inter", sans-serif;
+
+body {
+  font: 1rem $primaryFont;
+  line-height: 1.5;
+  background-color: $-clr-bg-light;
+  color: #444;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatBot_box {
+  display: none;
+}
+
+.chatBot_box_active {
+  display: block;
+  height: auto;
+
+  background-color: $secondery-clr-card;
+  border-radius: 15px;
+  box-shadow: 2px 2px 30px rgba($color: #474747, $alpha: 0.3);
+
+  padding: 0 0 2rem 0;
+
+  position: relative;
+
+  @keyframes fade-right {
+    0% {
+      bottom: -800px;
+    }
+
+    100% {
+      top: 0;
+    }
+  }
+
+  .chat_box_heading {
+    min-width: 400px;
+    height: 300px;
+
+    background-color: $card-bg-clr;
+    border-radius: 15px 15px 0 0;
+    box-shadow: inset 1px 1px 80px rgba($color: #fa3131, $alpha: 0.6);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .main_text_container {
+      width: 80%;
+      padding: 1.5rem 1rem;
+      margin: 0 auto;
+      color: white;
+
+      h2 {
+        font-size: clamp(1.5rem, 4vw, 1.9rem);
+        margin: 8px 0;
+      }
+
+      h3 {
+        font-size: clamp(1rem, 4vw, 1.3rem);
+
+        margin-bottom: 10px;
+      }
+    }
+
+    .Ask_Heading_container {
+      background-color: $secondery-clr-card;
+      width: 90%;
+      margin: 0 auto;
+      padding: 3rem 0 8px 25px;
+      border-radius: 15px 15px 0 0;
+
+      h3 {
+        font-size: 0.9rem;
+      }
+
+      span {
+        background-color: #fef6e6;
+        padding: 1px 6px;
+        margin-left: 3px;
+        border-radius: 100%;
+        color: red;
+        font-size: 1rem;
+      }
+    }
+
+    .botIcon_container {
+      position: absolute;
+      padding: 10px;
+      border-radius: 100%;
+      background-color: #fb6c0c;
+      top: 192px;
+      left: 40px;
+      box-shadow: 1px 1px 10px rgba($color: #474747, $alpha: 0.3);
+
+      .boticon {
+        width: 40px;
+      }
+    }
+  }
+
+  .questions_container {
+    width: 362px;
+    height: auto;
+    margin: 0 auto;
+    background-color: $secondery-clr-card;
+    border-radius: 0 0 15px 15px;
+
+    border-right: 1px solid $border-clr-light;
+    border-bottom: 1px solid $border-clr-light;
+    border-left: 1px solid $border-clr-light;
+    padding: 0 1.3rem 2rem 1.3rem;
+
+    ul {
+      li {
+        border: 1px solid $border-clr-light;
+        border-radius: 10px;
+        margin: 0 0 0.8rem 0;
+
+        &:nth-last-of-type(1) {
+          margin-bottom: 2rem;
+        }
+
+        a {
+          font-size: 0.8rem;
+          font-weight: 500;
+          color: $Link-clr;
+          display: block;
+          padding: 1rem;
+        }
+      }
+    }
+
+    .btn {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 10px 15px;
+
+      border: 1px solid $border-clr-light;
+      border-radius: 20px;
+      box-shadow: 1px 1px 5px rgba($color: #8a8686, $alpha: 0.8);
+
+      a {
+        color: $Link-clr;
+      }
+
+      img {
+        width: 15px;
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+.BotButton {
+  position: absolute;
+  right: 2rem;
+  bottom: 3rem;
+  padding: 20px 15px;
+
+  cursor: pointer;
+
+  background-color: $card-bg-clr;
+  border-radius: 100%;
+  box-shadow: inset 1px 1px 80px rgba($color: #c28e8e, $alpha: 0.4);
+  box-shadow: 1px 1px 20px rgba($color: #c0bcbc, $alpha: 0.6),
+    1px 1px 20px rgba($color: #fc6161, $alpha: 0.6);
+  img {
+    width: 60px;
+  }
+
+  transition: transform 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(0.8);
+    box-shadow: inset 1px 1px 80px rgba($color: #ff6060, $alpha: 0.6);
+    box-shadow: inset 1px 1px 80px rgba($color: #c28e8e, $alpha: 0.4);
+    box-shadow: 1px 1px 20px rgba($color: #c0bcbc, $alpha: 0.6),
+      1px 1px 20px rgba($color: #fc6161, $alpha: 0.6);
+  }
+}
