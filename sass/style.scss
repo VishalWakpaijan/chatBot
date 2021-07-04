@@ -139,6 +139,10 @@ body {
           display: block;
           padding: 1rem;
         }
+
+        &:hover {
+          background-color: rgb(233, 237, 238);
+        }
       }
     }
 
